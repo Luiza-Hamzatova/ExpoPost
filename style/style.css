@@ -1,0 +1,32 @@
+.posts {
+  margin-top: 50px;
+}
+h5 {
+  font-size: 1.25rem;
+}
+.card {
+  width: 100% !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.cards-holder {
+  gap: 25px;
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 2rem 2rem;
+}
+.row {
+  --bs-gutter-y: 1.5rem;
+}

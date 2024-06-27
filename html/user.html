@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/bootstrap.min.css" />
     <link rel="stylesheet" href="../style/style.css" />
-    <title>Document</title>
+    <title>ExpoPost</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container">
-        <a class="navbar-brand" href="../index.html">ExpoPost</a>
+        <a class="navbar-brand" href="#">ExpoPost</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -25,10 +25,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Posts</a>
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Posts</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../html/users.html">Users</a>
+              <a class="nav-link active" href="#">Users</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -45,38 +47,41 @@
         </div>
       </div>
     </nav>
-    <div class="container posts post">
-      <div class="col">
-        <div class="card">
+    <div class="container user" style="display: block">
+      <div class="card_container">
+        <div class="card" data-id="1">
           <div class="card-body">
-            <h5 class="card-title">Заголовок</h5>
-            <p class="card-text">Текст</p>
+            <h5 class="card-name">Имя пользователя</h5>
+            <p class="card-username">Ник</p>
+            <p class="card-email">почта</p>
+            <p class="card-phone">номер</p>
+            <p class="card-website">сайт</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container comments">
-      <h5 class="h5">Комментарии <span class="count">...</span></h5>
-      <div class="card">
-        <div class="card-header">ник</div>
-        <div class="card-body">
-          <h5 class="card-title">заголовок</h5>
-          <p class="card-text">текст</p>
+    <div class="container cards" style="display: block">
+        <h5 class="heading">Посты пользователя <span class="count">(.)</span></h5>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+        <div class="col" data-id="1" data-user_id="1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">заголовок</h5>
+              <p class="card-text">текст</p>
+              <a href="" class="btn btn-dark">Открыть пост</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-header">ник</div>
-        <div class="card-body">
-          <h5 class="card-title">заголовок</h5>
-          <p class="card-text">текст</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">ник</div>
-        <div class="card-body">
-          <h5 class="card-title">заголовок</h5>
-          <p class="card-text">текст</p>
-        </div>
+        <div class="col" data-id="1" data-user_id="1">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">заголовок</h5>
+                <p class="card-text">текст</p>
+                <a href="" class="btn btn-dark">Открыть пост</a>
+              </div>
+            </div>
+          </div>
+        
       </div>
     </div>
     <script

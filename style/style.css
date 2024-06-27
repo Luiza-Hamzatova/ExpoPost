@@ -13,7 +13,7 @@ h5 {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid lightslategray;
   border-radius: 0.25rem;
 }
 
@@ -29,4 +29,27 @@ h5 {
 }
 .row {
   --bs-gutter-y: 1.5rem;
+}
+.post .card {
+  border: none;
+}
+.comments .card {
+  margin-bottom: 25px;
+}
+.card_container {
+  margin-top: 80px;
+  margin-bottom: -65px;
+}
+.card_container .card {
+  border: none;
+}
+.heading {
+  margin-bottom: 30px;
+}
+.cards,
+.post {
+  margin-top: 80px;
+}
+.navbar  {
+  box-shadow: 0 0.1rem 2rem #198754;
 }

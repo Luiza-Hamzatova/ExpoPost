@@ -1,41 +1,37 @@
-.posts {
-  margin-top: 50px;
-}
-h5 {
-  font-size: 1.25rem;
-}
-.card {
-  width: 100% !important;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid lightslategray;
-  border-radius: 0.25rem;
+.cards,
+.post {
+  margin-top: 80px;
 }
 
-.cards-holder {
-  gap: 25px;
-  margin: 80px 0;
+.col {
+  margin-bottom: 25px;
+}
+
+.cards .card {
+  min-height: 250px;
+}
+.cards .card-body {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.card-body {
-  flex: 1 1 auto;
-  padding: 2rem 2rem;
-}
-.row {
-  --bs-gutter-y: 1.5rem;
-}
+
 .post .card {
   border: none;
 }
+
 .comments .card {
   margin-bottom: 25px;
 }
+
+.cards-holder {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 .card_container {
   margin-top: 80px;
   margin-bottom: -65px;
@@ -43,13 +39,10 @@ h5 {
 .card_container .card {
   border: none;
 }
+
 .heading {
   margin-bottom: 30px;
 }
-.cards,
-.post {
-  margin-top: 80px;
-}
-.navbar  {
-  box-shadow: 0 0.1rem 2rem #198754;
+.container{
+  
 }

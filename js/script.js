@@ -22,7 +22,8 @@ const createPost = (post) => {
   cardText.innerHTML = post.body;
   const btn = document.createElement("a");
   btn.classList.add(["btn", "btn-dark"]);
-  cardBody.append(cardTitle, cardText);
+  btn.innerHTML="Открыть пост"
+  cardBody.append(cardTitle, cardText, btn);
   card.append(cardBody);
   col.append(card);
   return col;

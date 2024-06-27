@@ -3,11 +3,11 @@
   margin-top: 80px;
 }
 
-.col {
+.col-md-4 {
   margin-bottom: 25px;
 }
 
-.cards .card {
+.card {
   min-height: 250px;
 }
 .cards .card-body {
@@ -43,6 +43,6 @@
 .heading {
   margin-bottom: 30px;
 }
-.container{
-  
+.navbar{
+  margin-bottom: 50px;
 }

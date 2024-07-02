@@ -46,3 +46,9 @@
 .navbar{
   margin-bottom: 50px;
 }
+p::first-letter {
+  text-transform: uppercase;
+}
+h5::first-letter {
+  text-transform: uppercase;
+}

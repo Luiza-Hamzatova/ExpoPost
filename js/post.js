@@ -12,8 +12,8 @@ if (location.search) {
     .then((res) => res.json())
     .then((res) => renderPost(res));
 }
-const renderPost = (post) => {
-  post.append(createPost(post));
+const renderPost = (res) => {
+  post.append(createPost(res));
 };
 
 const createPost = (post) => {

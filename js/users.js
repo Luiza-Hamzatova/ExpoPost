@@ -31,7 +31,7 @@ const createUser = (user) => {
   card_website.innerText = user.website;
   const btn = document.createElement("a");
   btn.classList.add("btn", "btn-dark");
-  btn.href = `user.html?id=${user.id}&userId=${user.userId}`;
+  btn.href = `user.html?id=${user.id}`;
   btn.innerHTML = "Перейти на страницу пользователя";
   card.append(card_body);
   card_body.append(card_name);

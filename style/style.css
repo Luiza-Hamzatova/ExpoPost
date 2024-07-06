@@ -52,3 +52,6 @@ p::first-letter {
 h5::first-letter {
   text-transform: uppercase;
 }
+.col{
+  margin-bottom: 20px;
+}

@@ -3,15 +3,18 @@ const postsContainer = document.querySelector(".cards");
 
 fetch(`https://jsonplaceholder.typicode.com/users${location.search}`)
   .then((res) => res.json())
-  .then((res) => renderUser(res));
+  .then((user) => renderUser(user));
 
-fetch(`https://jsonplaceholder.typicode.com/posts/${location.search}`)
+fetch(`https://jsonplaceholder.typicode.com/posts?userId=${location.search.substring(4)}`)
   .then((res) => res.json())
-  .then((posts) => renderPosts(posts));
+  .then((post) => renderPosts(post));
 
 const renderUser = (user) => {
+  const card_container = document.querySelector(".card_container");
+
+  userContainer.style.display = "block";
   user.forEach((user) => {
-    userContainer.append(createUser(user));
+    card_container.append(createUser(user));
   });
 };
 
@@ -52,24 +55,15 @@ const createUser = (user) => {
   return card;
 };
 
-// <div class="card" data-id="1">
-
-/* <div class="card-body">
-<h5 class="card-name">Имя пользователя</h5>
-<p class="card-username">Ник</p>
-<p class="card-email">почта</p>
-<p class="card-phone">номер</p>
-<p class="card-website">сайт</p>
-</div>
-</div> */
-
-const renderPosts = (postsArr) => {
-  const title = document.querySelector("h5");
-  postsArr.map((post) => postsContainer.append(createPost(post)));
-  title.innerHTML = `посты пользователя (${postsArr.length})`;
-  title.append(postsContainer);
+const renderPosts = (post) => {
+  postsContainer.style.display = "block";
+  const row = document.querySelector(".row");
+  const count = document.querySelector(".count");
+  count.innerText = `(${post.length})`;
+  post.forEach((post) => {
+    row.append(createPost(post));
+  });
 };
-
 const createPost = (user) => {
   const col = document.createElement("div");
   col.classList.add("col");
@@ -101,18 +95,3 @@ const createPost = (user) => {
 
   return col;
 };
-
-{
-  /* <div class="col">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk of the
-        card's content.
-      </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  </div> */
-}
